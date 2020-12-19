@@ -10,13 +10,12 @@
   </style>
 </head>
 <body>
-  <button id="btnShare" onclick="sendShare()">Share Target Picker</button>
-  <button id="btnLogin" onclick="liff.login()">Log In</button>
-  <button id="btnLogOut" onclick="logOut()">Log Out</button>
+  
   <script src="https://static.line-scdn.net/liff/edge/versions/2.5.0/sdk.js"></script>
   <script>
-    async function sendShare() {
-      const result = await liff.shareTargetPicker([
+    async function main() {
+       await liff.init({liffId:"1655423177-8dMEraKE"})
+       await liff.shareTargetPicker([
         {
           "type": "flex",
           "altText": "Flex Message",
@@ -116,35 +115,7 @@
           }
         }
       ])
-      if (result) {
-        alert(`[${result.status}] Message sent!`)
-      } else {
-        const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
-
-        if (minorVer === undefined) {
-          alert('ShareTargetPicker was canceled in external browser')
-          return
-        }
-
-        if (parseInt(majorVer) >= 10 && parseInt(minorVer) >= 10 && parseInt(patchVer) > 0) {
-          alert('ShareTargetPicker was canceled in LINE app')
-        }
-      }
-    }
-    function logOut() {
-      liff.logout()
-      window.location.reload()
-    }
-    async function main() {
-      await liff.init({ liffId: "8dMEraKE" })
-      if (liff.isLoggedIn()) {
-        document.getElementById("btnShare").style.display = "block"
-        if (!liff.isInClient()) {
-          document.getElementById("btnLogOut").style.display = "block"
-        }
-      } else {
-        document.getElementById("btnLogin").style.display = "block"
-      }
+      liff.closeWindow()
     }
     main()
   </script>
