@@ -16,71 +16,66 @@
     async function main() {
        await liff.init({liffId:"1655423177-8dMEraKE"})
        await liff.shareTargetPicker([
+             {
+               type:"flex",
+               altText:"Flex message Picker",
+               contents:{
+  "type": "bubble",
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "sm",
+    "backgroundColor": "#F8EEEEFF",
+    "borderColor": "#DA2A14EA",
+    "contents": [
+      {
+        "type": "text",
+        "text": "รายงานสรุปข้อร้องเรียนประจำวัน",
+        "weight": "bold",
+        "size": "md",
+        "color": "#080809FF",
+        "align": "center",
+        "wrap": true,
+        "contents": []
+      },
+      {
+        "type": "box",
+        "layout": "baseline",
+        "backgroundColor": "#931AA000",
+        "contents": [
           {
-            "type": "bubble",
-            "body": {
-            "type": "box",
-              "layout": "vertical",
-              "spacing": "sm",
-              "backgroundColor": "#F8EEEEFF",
-              "borderColor": "#DA2A14EA",
-              "contents": [
-                {
-                  "type": "text",
-                  "text": "รายงานสรุปข้อร้องเรียนประจำวัน",
-                  "weight": "bold",
-                  "size": "md",
-                  "color": "#080809FF",
-                  "align": "center",
-                  "wrap": true,
-                  "contents": []
-                },
-                {
-                  "type": "box",
-                  "layout": "baseline",
-                  "backgroundColor": "#931AA000",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "text": "$49",
-                      "weight": "bold",
-                      "size": "sm",
-                      "color": "#4D0968FF",
-                      "flex": 0,
-                      "align": "start",
-                      "wrap": true,
-                      "contents": []
-                    }
-                  ]
-                }
-              ]
-            },
-            "footer": {
-              "type": "box",
-              "layout": "vertical",
-              "spacing": "sm",
-              "contents": [
-                {
-                  "type": "text",
-                  "text": "แผนกลูกค้าสัมพันธ์ น.2 โทร 12 10529",
-                  "weight": "bold",
-                  "size": "sm",
-                  "color": "#0A0000FF",
-                  "contents": []
-                },
-                {
-                  "type": "button",
-                  "action": {
-                    "type": "uri",
-                    "label": "แชร์",
-                    "uri": "https://liff.line.me/1655423177-8dMEraKE"
-                  },
-                  "color": "#069D3AFF",
-                  "style": "primary"
-                }
-              ]
-            }
+            "type": "text",
+            "text": "$49",
+            "weight": "bold",
+            "size": "sm",
+            "color": "#4D0968FF",
+            "flex": 0,
+            "align": "start",
+            "wrap": true,
+            "contents": []
           }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "sm",
+    "contents": [
+      {
+        "type": "text",
+        "text": "แผนกลูกค้าสัมพันธ์ น.2 โทร 12 10529",
+        "weight": "bold",
+        "size": "sm",
+        "color": "#0A0000FF",
+        "contents": []
+      }
+    ]
+  }
+}
+               
+             }
       ])
     liff.closeWindow()
     }
