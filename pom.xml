@@ -1,7 +1,5 @@
 <project>
-  ...
   <build>
-    ...
     <plugins>https://github.com/ball296/linebottestliff/blob/main/pom.xml
       <plugin>
         <groupId>com.heroku.sdk</groupId>
