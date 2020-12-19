@@ -2,198 +2,128 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.heroku.sdk</groupId>
-  <artifactId>heroku-sdk-parent</artifactId>
-  <version>3.0.5-SNAPSHOT</version>
-  <packaging>pom</packaging>
+  <name>Heroku Maven Plugin</name>
+  <description>Maven plugin for deploying applications to Heroku</description>
+  <artifactId>heroku-maven-plugin</artifactId>
+  <packaging>maven-plugin</packaging>
 
-  <modules>
-    <module>heroku-deploy</module>
-    <module>heroku-deploy-standalone</module>
-    <module>heroku-maven-plugin</module>
-  </modules>
+  <parent>
+    <artifactId>heroku-sdk-parent</artifactId>
+    <groupId>com.heroku.sdk</groupId>
+    <version>3.0.5-SNAPSHOT</version>
+  </parent>
 
-  <name>Heroku SDK Parent</name>
-  <description>Parent project for Heroku SDK tools and libraries.</description>
-  <url>http://github.com/heroku/heroku-maven-plugin</url>
-
-  <scm>
-    <connection>scm:git:git://github.com/heroku/heroku-maven-plugin.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/heroku/heroku-maven-plugin.git</developerConnection>
-    <url>https://github.com/heroku/heroku-maven-plugin</url>
-    <tag>HEAD</tag>
-  </scm>
-
-  <distributionManagement>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>
-
-  <licenses>
-    <license>
-      <name>MIT</name>
-      <url>http://www.opensource.org/licenses/mit-license.php</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
-
-  <developers>
-    <developer>
-      <id>malax</id>
-      <name>Manuel Fuchs</name>
-      <email>manuel.fuchs@heroku.com</email>
-      <timezone>CET</timezone>
-    </developer>
-    <developer>
-      <id>jkutner</id>
-      <name>Joe Kutner</name>
-      <email>joe@heroku.com</email>
-      <timezone>CST</timezone>
-    </developer>
-  </developers>
-
-  <properties>
-    <heroku-deploy.version>${project.version}</heroku-deploy.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <invoker.skip>true</invoker.skip>
-    <maven.version>3.5.0</maven.version>
-  </properties>
-
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>com.fasterxml.jackson.core</groupId>
-        <artifactId>jackson-core</artifactId>
-        <version>2.10.2</version>
-      </dependency>
-      <dependency>
-        <groupId>com.fasterxml.jackson.core</groupId>
-        <artifactId>jackson-databind</artifactId>
-        <version>2.10.2</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.commons</groupId>
-        <artifactId>commons-compress</artifactId>
-        <version>1.19</version>
-      </dependency>
-      <dependency>
-        <groupId>commons-io</groupId>
-        <artifactId>commons-io</artifactId>
-        <version>2.6</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.commons</groupId>
-        <artifactId>commons-text</artifactId>
-        <version>1.8</version>
-      </dependency>
-      <dependency>
-        <groupId>org.eclipse.jgit</groupId>
-        <artifactId>org.eclipse.jgit</artifactId>
-        <version>5.6.0.201912101111-r</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.httpcomponents</groupId>
-        <artifactId>httpclient</artifactId>
-        <version>4.5.11</version>
-      </dependency>
-      <dependency>
-        <groupId>com.heroku.api</groupId>
-        <artifactId>heroku-api</artifactId>
-        <version>0.43</version>
-      </dependency>
-      <dependency>
-        <groupId>com.heroku.api</groupId>
-        <artifactId>heroku-json-jackson</artifactId>
-        <version>0.43</version>
-      </dependency>
-      <dependency>
-        <groupId>com.heroku.api</groupId>
-        <artifactId>heroku-http-apache</artifactId>
-        <version>0.43</version>
-      </dependency>
-      <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.13.1</version>
-        <scope>test</scope>
-      </dependency>
-
-    </dependencies>
-  </dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>com.heroku.sdk</groupId>
+      <artifactId>heroku-deploy</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-plugin-api</artifactId>
+      <version>${maven.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.plugin-tools</groupId>
+      <artifactId>maven-plugin-annotations</artifactId>
+      <version>3.6.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-core</artifactId>
+      <version>${maven.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-artifact</artifactId>
+      <version>${maven.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-dependency-plugin</artifactId>
+      <version>3.1.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.twdata.maven</groupId>
+      <artifactId>mojo-executor</artifactId>
+      <version>2.3.1</version>
+    </dependency>
+  </dependencies>
 
   <build>
     <plugins>
       <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.7.0</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.0.2</version>
       </plugin>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <version>3.2.1</version>
-        <executions>
-          <execution>
-            <id>attach-source</id>
-            <phase>deploy</phase>
-            <goals>
-              <goal>jar-no-fork</goal>
-            </goals>
-          </execution>
-        </executions>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.20.1</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.0.2</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>3.0.2</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-plugin-plugin</artifactId>
+        <version>3.5</version>
+        <configuration>
+          <encoding>UTF-8</encoding>
+          <goalPrefix>heroku</goalPrefix>
+        </configuration>
       </plugin>
       <plugin>
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>3.1.1</version>
-        <executions>
-          <execution>
-            <id>attach-javadoc</id>
-            <phase>deploy</phase>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-            <configuration>
-              <source>1.8</source>
-              <doclint>none</doclint>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <artifactId>maven-gpg-plugin</artifactId>
-        <version>1.6</version>
-        <executions>
-          <execution>
-            <id>sign-artifacts</id>
-            <phase>deploy</phase>
-            <goals>
-              <goal>sign</goal>
-            </goals>
-          </execution>
-        </executions>
         <configuration>
-          <gpgArguments>
-            <arg>--pinentry-mode</arg>
-            <arg>loopback</arg>
-          </gpgArguments>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.8</version>
-        <extensions>true</extensions>
-        <configuration>
-          <serverId>ossrh</serverId>
-          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-          <autoReleaseAfterClose>true</autoReleaseAfterClose>
+          <doclint>none</doclint>
         </configuration>
       </plugin>
     </plugins>
   </build>
+
+  <profiles>
+    <profile>
+      <id>it</id>
+      <properties>
+        <invoker.skip>false</invoker.skip>
+      </properties>
+      <build>
+        <defaultGoal>install</defaultGoal>
+        <plugins>
+          <plugin>
+            <artifactId>maven-invoker-plugin</artifactId>
+            <version>3.2.1</version>
+            <configuration>
+              <projectsDirectory>src/it</projectsDirectory>
+              <cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>
+              <preBuildHookScript>setup.groovy</preBuildHookScript>
+              <postBuildHookScript>verify.groovy</postBuildHookScript>
+              <streamLogs>true</streamLogs>
+            </configuration>
+            <executions>
+              <execution>
+                <id>integration-test</id>
+                <goals>
+                  <goal>install</goal>
+                  <goal>run</goal>
+                </goals>
+                <configuration>
+                  <pomIncludes>
+                    <pomInclude>*/pom.xml</pomInclude>
+                  </pomIncludes>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>
