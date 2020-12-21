@@ -1,6 +1,6 @@
 <?php 
     include("data.php");
-    myArray=jason_decode($data,true);
+    myArray=jason_decode($data2,true);
 ?>    
 <!DOCTYPE html>
 <html>
