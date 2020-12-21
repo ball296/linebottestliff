@@ -90,7 +90,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "'${html}'",
+            "text": "<?php echo $html ?>;",
             "weight": "bold",
             "size": "sm",
             "color": "#4D0968FF",
