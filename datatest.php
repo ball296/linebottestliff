@@ -57,7 +57,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "<?php echo $myArray[0][namepea];?>;",
+            "text": "<?php echo $myArray[0][namepea];?>",
             "weight": "bold",
             "size": "sm",
             "color": "#4D0968FF",
