@@ -9,7 +9,6 @@ while ($row = mysqli_fetch_assoc($result))
 }
 $data2=json_encode($data);
 ?>   
-<?php
 <html>
 <head>
   <meta charset="UTF-8">
@@ -109,5 +108,4 @@ $data2=json_encode($data);
   </script>
 </body>
 </html>
- ?>    
         
