@@ -1,6 +1,6 @@
 <?php 
     include("data.php");
-    myArray=json_decode($data2,true);
+    $myArray=$data;
 ?>    
 <!DOCTYPE html>
 <html>
