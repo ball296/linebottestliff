@@ -56,7 +56,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "<?php echo $data ?>;",
+            "text": "<?php echo $data2 ?>;",
             "weight": "bold",
             "size": "sm",
             "color": "#4D0968FF",
