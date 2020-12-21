@@ -1,14 +1,7 @@
-<?php
-$conn=mysqli_connect("ballstudio.ceolfzqm6b95.us-west-2.rds.amazonaws.com","root","freedom4506296","demo");
-$result=mysqli_query($conn,"SELECT*FROM voctable");
-$data = array();
-while ($row = mysqli_fetch_assoc($result))
-{
-    $data[]=$row;
-
-}
-$data2=json_encode($data);
-?>   
+<?php 
+    include("data.php");
+?>    
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -63,7 +56,7 @@ $data2=json_encode($data);
         "contents": [
           {
             "type": "text",
-            "text": "<?php echo $data2 ?>;",
+            "text": "<?php echo $data ?>;",
             "weight": "bold",
             "size": "sm",
             "color": "#4D0968FF",
@@ -108,4 +101,3 @@ $data2=json_encode($data);
   </script>
 </body>
 </html>
-        
