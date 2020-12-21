@@ -7,7 +7,7 @@ while ($row = mysqli_fetch_assoc($result))
     $data[]=$row;
 
 }
-$data2=echo json_encode($data);
+$data2=json_encode($data);
 ?>   
 <!DOCTYPE html>
 <html>
