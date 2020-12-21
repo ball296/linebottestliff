@@ -1,5 +1,6 @@
 <?php 
     include("data.php");
+    myArray=jason_decode($data,true)
 ?>    
 <!DOCTYPE html>
 <html>
@@ -56,7 +57,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "<?php echo $data2 ?>;",
+            "text": "<?php echo $myArray[0][namepea];?>;",
             "weight": "bold",
             "size": "sm",
             "color": "#4D0968FF",
