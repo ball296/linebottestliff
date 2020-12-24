@@ -1,6 +1,6 @@
 <?php 
     include("data.php");
-    $myArray=$data;
+    $myArray=$newccAddress;
 ?>    
 <!DOCTYPE html>
 <html>
@@ -57,7 +57,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "<?php echo $myArray[0][namepea];?>",
+            "text": "<?php echo $myArray;?>",
             "weight": "bold",
             "size": "sm",
             "color": "#4D0968FF",
