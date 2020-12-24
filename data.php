@@ -14,7 +14,7 @@ $stw="statusvoc";
 $numdata=count($data);
 for ($x = 0; $x <= $numdata; $x++) {
     if ($data[$x][$typevoc]<>"ร้องเรียน" and $data[$x][$stw]=="กำลังดำเนินการ" ){
-    $data2[]= $data[$x][$namepea1]." ".$data[$x][$stw]."\n\n" ;
+    $data2[]= $data[$x][$namepea1]." ".$data[$x][$stw];
   }
 }
 $newccAddress = implode('\n\n', $data2); 
