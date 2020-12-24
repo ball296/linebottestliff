@@ -22,7 +22,7 @@
        await liff.shareTargetPicker([
              {
                type:"flex",
-               altText:"Flex message Picker",
+               altText:"รายงานข้อร้องเรียนประจำวัน",
                contents:{
   "type": "bubble",
   "hero": {
