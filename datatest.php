@@ -114,6 +114,7 @@ $datacount=count($data2)+1;
   }
 }'
 ?>
+        }
              }
       ])
     liff.closeWindow()
