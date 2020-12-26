@@ -24,7 +24,7 @@ for ($x = 0; $x <= $numdata; $x++) {
   }
 }
 }
-#$newccAddress = implode('\n\n', $data2); 
+$newccAddress = implode('\n\n', $data2); 
 #print $newccAddress ;
 ?>
 
