@@ -1,6 +1,6 @@
 <?php 
     include("data.php");
-    $myArray=$newccAddress;
+    #$myArray=$newccAddress;
     date_default_timezone_set("Asia/Bangkok");
     $datedata=date("d/m/Y");
 ?>    
