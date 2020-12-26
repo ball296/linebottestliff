@@ -1,6 +1,8 @@
 <?php 
     include("data.php");
     $myArray=$newccAddress;
+    date_default_timezone_set("Asia/Bangkok");
+    $datedata=date("d/m/Y");
 ?>    
 <!DOCTYPE html>
 <html>
@@ -42,7 +44,7 @@
     "contents": [
       {
         "type": "text",
-        "text": "รายงานสรุปข้อร้องเรียนประจำวัน",
+        "text": "รายงานสรุปข้อร้องเรียนประจำวัน วันที่ "<?php $datedata ?>,
         "weight": "bold",
         "size": "md",
         "color": "#080809FF",
@@ -85,9 +87,10 @@
       },
       {
         "type": "button",
+        "color": "#24BA0DF7",
         "action": {
           "type": "uri",
-          "label": "Button",
+          "label": "ส่งต่อ",
           "uri": "https://liff.line.me/1655423177-8dMEraKE"
         }
       }
