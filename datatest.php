@@ -1,4 +1,3 @@
-
 <?php 
     include("data.php");
     $myArray=$newccAddress;
@@ -26,46 +25,68 @@
              {
                type:"flex",
                altText:"รายงานข้อร้องเรียนประจำวัน",
-               contents:{
+               contents:{                
   "type": "bubble",
-  "hero": {
-    "type": "image",
-    "url": "https://gdurl.com/UyRY",
-    "margin": "xxl",
-    "size": "3xl",
-    "aspectRatio": "20:5",
-    "backgroundColor": "#79058BF2"
-  },
-  "body": {
+  "direction": "ltr",
+  "header": {
     "type": "box",
     "layout": "vertical",
-    "spacing": "sm",
-    "backgroundColor": "#F8EEEEFF",
-    "borderColor": "#DA2A14EA",
     "contents": [
       {
         "type": "text",
-        "text": "รายงานสรุปข้อร้องเรียนประจำวันที่ <?php echo $datedata;?>",
+        "text": "ติดตามงานข้อร้องเรียนประจำวัน",
         "weight": "bold",
-        "size": "md",
-        "color": "#080809FF",
+        "color": "#FFFFFFF9",
         "align": "center",
-        "wrap": true,
         "contents": []
       },
       {
         "type": "box",
-        "layout": "baseline",
-        "backgroundColor": "#931AA000",
+        "layout": "vertical",
         "contents": [
           {
             "type": "text",
-            "text": "<?php echo $myArray;?>",
+            "text": "ประจำวันที่",
+            "align": "center",
+            "margin": "sm",
+            "contents": []
+          }
+        ]
+      }
+    ]
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#770D6EFF",
+        "contents": [
+          {
+            "type": "text",
+            "text": "1. กฟอ.แม่สอด",
             "weight": "bold",
-            "size": "sm",
-            "color": "#4D0968FF",
-            "flex": 0,
-            "align": "start",
+            "color": "#F7EBEBFF",
+            "gravity": "center",
+            "margin": "sm",
+            "wrap": true,
+            "contents": []
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#B90CAAFF",
+        "contents": [
+          {
+            "type": "text",
+            "text": "2. กฟจ.พิษณุโลก ",
+            "weight": "bold",
+            "color": "#F7EFEFFF",
+            "margin": "sm",
             "wrap": true,
             "contents": []
           }
@@ -75,31 +96,57 @@
   },
   "footer": {
     "type": "box",
-    "layout": "vertical",
-    "spacing": "sm",
+    "layout": "horizontal",
     "contents": [
       {
-        "type": "text",
-        "text": "แผนกลูกค้าสัมพันธ์ น.2 โทร 12 10529",
-        "weight": "bold",
-        "size": "sm",
-        "color": "#0A0000FF",
-        "contents": []
+        "type": "box",
+        "layout": "baseline",
+        "contents": [
+          {
+            "type": "text",
+            "text": "แผนกลูกค้าสัมพันธ์ โทร (12) 10215",
+            "weight": "bold",
+            "size": "xs",
+            "color": "#FFFFFFFF",
+            "wrap": true,
+            "contents": []
+          }
+        ]
       },
       {
-        "type": "button",
-        
-        "action": {
-          "type": "uri",
-          "label": "ส่งต่อ",
-          "uri": "https://liff.line.me/1655423177-8dMEraKE"
-        },
-        "color": "#24BA0DF7"
+        "type": "box",
+        "layout": "horizontal",
+        "margin": "xxl",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "Share",
+              "uri": "https://linecorp.com"
+            },
+            "color": "#860B8CFF",
+            "margin": "md",
+            "height": "sm",
+            "style": "primary",
+            "gravity": "bottom"
+          }
+        ]
       }
     ]
+  },
+  "styles": {
+    "header": {
+      "backgroundColor": "#C905C1FF"
+    },
+    "body": {
+      "backgroundColor": "#E198DCFF"
+    },
+    "footer": {
+      "backgroundColor": "#A906ADFF"
+    }
   }
 }
-             }
       ])
     liff.closeWindow()
     }
