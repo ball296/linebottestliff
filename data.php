@@ -22,7 +22,7 @@ for ($x = 0; $x <= $numdata; $x++) {
     $data2[]= $data[$x][$namepea1]." เลขที่ร้อง ".$data[$x][$numvocdata]." ชื่อผู้ร้อง ".$data[$x][$namedata]." ร้องแล้ว ".$data[$x][$numdaydata]." วัน สถานะ "."'".$data[$x][$stw]."'" ;
   }
   }
-}
+
 }
 $newccAddress = implode('\n\n', $data2); 
 #print $newccAddress ;
