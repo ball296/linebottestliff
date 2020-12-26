@@ -25,9 +25,7 @@
              {
                type:"flex",
                altText:"รายงานข้อร้องเรียนประจำวัน",
-               contents:
-                <?php
-echo '{
+               contents:<?php echo '{
     "type": "bubble",
     "direction": "ltr",
     "header": {
@@ -47,14 +45,15 @@ echo '{
     "body": {
       "type": "box",
       "layout": "vertical",
-      "contents": [';?>
+      "contents": ['; 
+                 ?>
         <?php
   $datacount=count($data2)+1;
         #echo $datacount;
         $colorvalue=1; 
         foreach($data2 as $value) {
           if ($colorvalue%2==0){$color="#770D6EFF";}else{$color="#B90CAAFF";}
-        echo "{<br>";
+          echo "{<br>";
           echo '"type":"box",<br>';
           echo '"layout": "vertical",<br>';
           echo '"backgroundColor":"'.$color.'",<br>';
@@ -72,9 +71,8 @@ echo '{
           echo "]<br>";
           if($colorvalue==$datacount-1){
         echo "}<br>";}else{echo "},<br>";}
-        $colorvalue=$colorvalue+1;
+            $colorvalue=$colorvalue+1;
             }
-  
             echo ']
     },
     "footer": {
