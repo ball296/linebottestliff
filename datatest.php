@@ -114,8 +114,7 @@ echo '{
         "backgroundColor": "#A906ADFF"
       }
     }
-  }
-}' 
+  }' 
 ?>
              }
       ])
