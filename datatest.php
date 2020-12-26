@@ -44,7 +44,7 @@
     "contents": [
       {
         "type": "text",
-        "text": "รายงานสรุปข้อร้องเรียนประจำวันที่ "<?php echo $datedata ?>,
+        "text": "รายงานสรุปข้อร้องเรียนประจำวันที่ "<?php echo $datedata ; ?>,
         "weight": "bold",
         "size": "md",
         "color": "#080809FF",
