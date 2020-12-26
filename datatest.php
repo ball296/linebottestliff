@@ -100,19 +100,7 @@
         ]
       }
     ]
-  },
-  "styles": {
-    "header": {
-      "backgroundColor": "#C905C1FF"
-    },
-    "body": {
-      "backgroundColor": "#E198DCFF"
-    },
-    "footer": {
-      "backgroundColor": "#A906ADFF"
-    }
   }
-}
       ])
     liff.closeWindow()
     }
