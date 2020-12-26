@@ -22,15 +22,26 @@ for ($x = 0; $x <= $numdata; $x++) {
       if($data[$x][$numdaydata]>=15){
     $data2[]= ($k)." ".$data[$x][$namepea1]." เลขที่ร้อง ".$data[$x][$numvocdata]." ชื่อผู้ร้อง ".$data[$x][$namedata]." ร้องแล้ว ".$data[$x][$numdaydata]." วัน สถานะ "."'".$data[$x][$stw]."'" ;
     $k=$k+1;
-  }
-  }
+  }}
+  
     if ($data[$x][$typevoc]<>"ร้องเรียน" and $data[$x][$stw]=="รอดำเนินการ" ){ 
     $data3[]=($j)." ".$data[$x][$namepea1]." เลขที่ร้อง ".$data[$x][$numvocdata]." ชื่อผู้ร้อง ".$data[$x][$namedata]." ร้องแล้ว ".$data[$x][$numdaydata]." วัน สถานะ "."'".$data[$x][$stw]."'" ;
     $j=$j+1;
     }
 }
 
-$newccAddress = implode('\n\n', $data3);
-$newccAddress2=implode('\n\n',$data2); 
-#print $newccAddress ;
+if (count($data2)<>0){
+#echo count($newccAddress1);
+$newccAddress2 = implode('\n\n', $data2);
+}else{
+  $newccAddress2="data2 ไม่มีข้อมูล";
+}
+if (count($data3)<>0){
+$newccAddress = implode('\n\n',$data3); 
+}else{
+  $newccAddress="data3 ไม่มีข้อมูล";
+}
+#echo $newccAddress;
+#echo $newccAddress2;
 ?>
+
