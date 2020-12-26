@@ -1,3 +1,4 @@
+#backup datatest.php
 <?php 
     include("data.php");
     $myArray=$newccAddress;
@@ -27,23 +28,6 @@
                altText:"รายงานข้อร้องเรียนประจำวัน",
                contents:{
   "type": "bubble",
-  "hero": {
-    "type": "image",
-    "url": "https://gdurl.com/UyRY",
-    "margin": "xxl",
-    "size": "3xl",
-    "aspectRatio": "20:5",
-    "backgroundColor": "#79058BF2"
-  },
-  "body": {
-    "type": "box",
-    "layout": "vertical",
-    "spacing": "sm",
-    "backgroundColor": "#F8EEEEFF",
-    "borderColor": "#DA2A14EA",
-    "contents": [
-      <?php echo '{
-  "type": "bubble",
   "direction": "ltr",
   "header": {
     "type": "box",
@@ -62,7 +46,8 @@
   "body": {
     "type": "box",
     "layout": "vertical",
-    "contents": [';
+    "contents": [
+      <?php
 $datacount=count($data2)+1;
       #echo $datacount;
       $colorvalue=1; 
