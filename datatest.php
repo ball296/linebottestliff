@@ -1,8 +1,8 @@
 <?php 
     include("data.php");
     #$myArray=$newccAddress;
-    date_default_timezone_set("Asia/Bangkok");
-    $datedata=date("d/m/Y");
+    #date_default_timezone_set("Asia/Bangkok");
+    #$datedata=date("d/m/Y");
 ?>    
 <!DOCTYPE html>
 <html>
@@ -82,12 +82,12 @@
       $colorvalue=1; 
       foreach($data2 as $value) {
         if ($colorvalue%2==0){$color="#770D6EFF";}else{$color="#B90CAAFF";}
-      echo "{";
-        echo '"type":"box",';
-        echo '"layout": "vertical",';
-        echo '"backgroundColor":"'.$color.'",';
-        echo '"contents": [';
-          echo "{";
+            echo "{";
+            echo '"type":"box",';
+            echo '"layout": "vertical",';
+            echo '"backgroundColor":"'.$color.'",';
+            echo '"contents": [';
+            echo "{";
             echo '"type": "text",';
             echo '"text": "'.$value.'",';
             echo '"weight": "bold",';
@@ -96,11 +96,11 @@
             echo '"margin": "sm",';
             echo '"wrap": true,';
             echo '"contents": []';
-          echo "}";
-        echo "]";
+            echo "}";
+            echo "]";
         if($colorvalue==$datacount-1){
-      echo "}";}else{echo "},";}
-      $colorvalue=$colorvalue+1;
+            echo "}";}else{echo "},";}
+        $colorvalue=$colorvalue+1;
           }
       ?>
     ]
