@@ -44,7 +44,7 @@
     "contents": [
       {
         "type": "text",
-        "text": "รายงานสรุปข้อร้องเรียนประจำวันที่ "<?php echo $datedata ; ?>,
+        "text": "รายงานสรุปข้อร้องเรียนประจำวันที่ <?php echo $datedata;?>",
         "weight": "bold",
         "size": "md",
         "color": "#080809FF",
@@ -87,11 +87,13 @@
       },
       {
         "type": "button",
+        
         "action": {
           "type": "uri",
           "label": "ส่งต่อ",
           "uri": "https://liff.line.me/1655423177-8dMEraKE"
-        }
+        },
+        "color": "#24BA0DF7"
       }
     ]
   }
