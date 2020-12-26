@@ -19,7 +19,7 @@ $k=1;
 $j=1;
 for ($x = 0; $x <= $numdata; $x++) {
     if ($data[$x][$typevoc]<>"ร้องเรียน" and $data[$x][$stw]=="กำลังดำเนินการ" ){
-      if($data[$x][$numdaydata]>=15){
+      if($data[$x][$numdaydata]<=15){
     $data2[]= ($k)." ".$data[$x][$namepea1]." เลขที่ร้อง ".$data[$x][$numvocdata]." ชื่อผู้ร้อง ".$data[$x][$namedata]." ร้องแล้ว ".$data[$x][$numdaydata]." วัน สถานะ "."'".$data[$x][$stw]."'" ;
     $k=$k+1;
   }}
