@@ -101,6 +101,9 @@
       }
     ]
   }
+  }
+             }
+
       ])
     liff.closeWindow()
     }
