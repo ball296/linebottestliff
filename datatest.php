@@ -1,4 +1,3 @@
-#backup datatest.php
 <?php 
     include("data.php");
     $myArray=$newccAddress;
