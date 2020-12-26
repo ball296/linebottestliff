@@ -1,3 +1,4 @@
+
 <?php 
     include("data.php");
     $myArray=$newccAddress;
@@ -43,121 +44,62 @@
     "borderColor": "#DA2A14EA",
     "contents": [
       {
-  "type": "bubble",
-  "direction": "ltr",
-  "header": {
-    "type": "box",
-    "layout": "vertical",
-    "contents": [
-      {
         "type": "text",
-        "text": "ติดตามงานข้อร้องเรียนประจำวัน",
+        "text": "รายงานสรุปข้อร้องเรียนประจำวันที่ <?php echo $datedata;?>",
         "weight": "bold",
-        "color": "#FFFFFFF9",
+        "size": "md",
+        "color": "#080809FF",
         "align": "center",
+        "wrap": true,
         "contents": []
       },
       {
         "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "text",
-            "text": "ประจำวันที่",
-            "align": "center",
-            "margin": "sm",
-            "contents": []
-          }
-        ]
-      }
-    ]
-  },
-  "body": {
-    "type": "box",
-    "layout": "vertical",
-    "contents": [
-      <?php
-      $datacount=count($data2)+1;
-      #echo $datacount;
-      $colorvalue=1; 
-      foreach($data2 as $value) {
-        if ($colorvalue%2==0){$color="#770D6EFF";}else{$color="#B90CAAFF";}
-      echo "{";
-        echo '"type":"box",';
-        echo '"layout": "vertical",';
-        echo '"backgroundColor":"'.$color.'",';
-        echo '"contents": [';
-          echo "{";
-            echo '"type": "text",';
-            echo '"text": "'.$value.'",';
-            echo '"weight": "bold",';
-            echo '"color": "#F7EBEBFF",';
-            echo '"gravity": "center",';
-            echo '"margin": "sm",';
-            echo '"wrap": true,';
-            echo '"contents": []';
-          echo "}";
-        echo "]";
-        if($colorvalue==$datacount-1){
-      echo "}";}else{echo "},";}
-      $colorvalue=$colorvalue+1;
-          }
-      ?>
-    ]
-  },
-  "footer": {
-    "type": "box",
-    "layout": "horizontal",
-    "contents": [
-      {
-        "type": "box",
         "layout": "baseline",
+        "backgroundColor": "#931AA000",
         "contents": [
           {
             "type": "text",
-            "text": "แผนกลูกค้าสัมพันธ์ โทร (12) 10215",
+            "text": "<?php echo $myArray;?>",
             "weight": "bold",
-            "size": "xs",
-            "color": "#FFFFFFFF",
+            "size": "sm",
+            "color": "#4D0968FF",
+            "flex": 0,
+            "align": "start",
             "wrap": true,
             "contents": []
           }
         ]
-      },
-      {
-        "type": "box",
-        "layout": "horizontal",
-        "margin": "xxl",
-        "contents": [
-          {
-            "type": "button",
-            "action": {
-              "type": "uri",
-              "label": "Share",
-              "uri": "https://liff.line.me/1655423177-8dMEraKE"
-            },
-            "color": "#860B8CFF",
-            "margin": "md",
-            "height": "sm",
-            "style": "primary",
-            "gravity": "bottom"
-          }
-        ]
       }
     ]
   },
-  "styles": {
-    "header": {
-      "backgroundColor": "#C905C1FF"
-    },
-    "body": {
-      "backgroundColor": "#E198DCFF"
-    },
-    "footer": {
-      "backgroundColor": "#A906ADFF"
-    }
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "sm",
+    "contents": [
+      {
+        "type": "text",
+        "text": "แผนกลูกค้าสัมพันธ์ น.2 โทร 12 10529",
+        "weight": "bold",
+        "size": "sm",
+        "color": "#0A0000FF",
+        "contents": []
+      },
+      {
+        "type": "button",
+        
+        "action": {
+          "type": "uri",
+          "label": "ส่งต่อ",
+          "uri": "https://liff.line.me/1655423177-8dMEraKE"
+        },
+        "color": "#24BA0DF7"
+      }
+    ]
   }
 }
+             }
       ])
     liff.closeWindow()
     }
