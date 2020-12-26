@@ -1,8 +1,8 @@
 <?php 
     include("data.php");
-    #$myArray=$newccAddress;
-    #date_default_timezone_set("Asia/Bangkok");
-    #$datedata=date("d/m/Y");
+    $myArray=$newccAddress;
+    date_default_timezone_set("Asia/Bangkok");
+    $datedata=date("d/m/Y");
 ?>    
 <!DOCTYPE html>
 <html>
@@ -25,24 +25,7 @@
              {
                type:"flex",
                altText:"รายงานข้อร้องเรียนประจำวัน",
-               contents:{
-"type": "bubble",
-  "hero": {
-    "type": "image",
-    "url": "https://gdurl.com/UyRY",
-    "margin": "xxl",
-    "size": "3xl",
-    "aspectRatio": "20:5",
-    "backgroundColor": "#79058BF2"
-  },
-  "body": {
-    "type": "box",
-    "layout": "vertical",
-    "spacing": "sm",
-    "backgroundColor": "#F8EEEEFF",
-    "borderColor": "#DA2A14EA",
-    "contents": [
-      {
+               contents:<?php echo '{
   "type": "bubble",
   "direction": "ltr",
   "header": {
@@ -56,74 +39,45 @@
         "color": "#FFFFFFF9",
         "align": "center",
         "contents": []
-      },
-      {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "text",
-            "text": "ประจำวันที่",
-            "align": "center",
-            "margin": "sm",
-            "contents": []
-          }
-        ]
       }
     ]
   },
   "body": {
     "type": "box",
     "layout": "vertical",
-    "contents": [
-      <?php
-      $datacount=count($data2)+1;
+    "contents": [';
+$datacount=count($data2)+1;
       #echo $datacount;
       $colorvalue=1; 
       foreach($data2 as $value) {
         if ($colorvalue%2==0){$color="#770D6EFF";}else{$color="#B90CAAFF";}
-            echo "{";
-            echo '"type":"box",';
-            echo '"layout": "vertical",';
-            echo '"backgroundColor":"'.$color.'",';
-            echo '"contents": [';
-            echo "{";
-            echo '"type": "text",';
-            echo '"text": "'.$value.'",';
-            echo '"weight": "bold",';
-            echo '"color": "#F7EBEBFF",';
-            echo '"gravity": "center",';
-            echo '"margin": "sm",';
-            echo '"wrap": true,';
-            echo '"contents": []';
-            echo "}";
-            echo "]";
+      echo "{<br>";
+        echo '"type":"box",<br>';
+        echo '"layout": "vertical",<br>';
+        echo '"backgroundColor":"'.$color.'",<br>';
+        echo '"contents": [<br>';
+          echo "{<br>";
+            echo '"type": "text",<br>';
+            echo '"text": "'.$value.'",<br>';
+            echo '"weight": "bold",<br>';
+            echo '"color": "#F7EBEBFF",<br>';
+            echo '"gravity": "center",<br>';
+            echo '"margin": "sm",<br>';
+            echo '"wrap": true,<br>';
+            echo '"contents": []<br>';
+          echo "}<br>";
+        echo "]<br>";
         if($colorvalue==$datacount-1){
-            echo "}";}else{echo "},";}
-        $colorvalue=$colorvalue+1;
+      echo "}<br>";}else{echo "},<br>";}
+      $colorvalue=$colorvalue+1;
           }
-      ?>
-    ]
+
+          echo ']
   },
   "footer": {
     "type": "box",
     "layout": "horizontal",
     "contents": [
-      {
-        "type": "box",
-        "layout": "baseline",
-        "contents": [
-          {
-            "type": "text",
-            "text": "แผนกลูกค้าสัมพันธ์ โทร (12) 10215",
-            "weight": "bold",
-            "size": "xs",
-            "color": "#FFFFFFFF",
-            "wrap": true,
-            "contents": []
-          }
-        ]
-      },
       {
         "type": "box",
         "layout": "horizontal",
@@ -134,7 +88,7 @@
             "action": {
               "type": "uri",
               "label": "Share",
-              "uri": "https://liff.line.me/1655423177-8dMEraKE"
+              "uri": "https://linecorp.com"
             },
             "color": "#860B8CFF",
             "margin": "md",
@@ -157,8 +111,11 @@
       "backgroundColor": "#A906ADFF"
     }
   }
-}
-           }
+}'
+#echo $colorvalue;
+#echo $datacount;
+?>
+             }
       ])
     liff.closeWindow()
     }
