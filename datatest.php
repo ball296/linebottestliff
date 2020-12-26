@@ -47,7 +47,7 @@ echo '{
     "body": {
       "type": "box",
       "layout": "vertical",
-      "contents": ['?>
+      "contents": [';?>
         <?php
   $datacount=count($data2)+1;
         #echo $datacount;
@@ -114,7 +114,7 @@ echo '{
         "backgroundColor": "#A906ADFF"
       }
     }
-  }' 
+  }'; 
 ?>
              }
       ])
