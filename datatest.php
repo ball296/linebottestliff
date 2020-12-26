@@ -25,7 +25,7 @@
              {
                type:"flex",
                altText:"รายงานข้อร้องเรียนประจำวัน",
-               contents:{                
+               contents:{
   "type": "bubble",
   "direction": "ltr",
   "header": {
@@ -39,19 +39,6 @@
         "color": "#FFFFFFF9",
         "align": "center",
         "contents": []
-      },
-      {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "text",
-            "text": "ประจำวันที่",
-            "align": "center",
-            "margin": "sm",
-            "contents": []
-          }
-        ]
       }
     ]
   },
@@ -98,21 +85,6 @@
     "type": "box",
     "layout": "horizontal",
     "contents": [
-      {
-        "type": "box",
-        "layout": "baseline",
-        "contents": [
-          {
-            "type": "text",
-            "text": "แผนกลูกค้าสัมพันธ์ โทร (12) 10215",
-            "weight": "bold",
-            "size": "xs",
-            "color": "#FFFFFFFF",
-            "wrap": true,
-            "contents": []
-          }
-        ]
-      },
       {
         "type": "box",
         "layout": "horizontal",
