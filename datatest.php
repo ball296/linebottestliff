@@ -87,13 +87,12 @@
       },
       {
         "type": "button",
-        
         "action": {
           "type": "uri",
           "label": "ส่งต่อ",
           "uri": "https://liff.line.me/1655423177-8dMEraKE"
         },
-        "color": "#24BA0DF7"
+         "color":"#24BA0DF7"
       }
     ]
   }
