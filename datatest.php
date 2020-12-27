@@ -35,7 +35,7 @@
     "contents": [
       {
         "type": "text",
-        "text": "ติดตามงานข้อร้องเรียนประจำวัน",
+        "text": "ติดตามงาน '"'ร้องขอ/แจ้งเหตุ/เสนอแนะ'"' ประจำวัน",
         "weight": "bold",
         "color": "#FFFFFFF9",
         "align": "center",
@@ -45,6 +45,7 @@
         "type": "text",
         "text": "วันที่ '.$datedata.'",
         "weight": "bold",
+        "color": "#FFFFFFF9",
         "align": "center",
         "margin": "md",
         "contents": []
@@ -54,7 +55,19 @@
   "body": {
     "type": "box",
     "layout": "vertical",
-    "contents": [<?php $datacount=count($data2)+1;
+    "contents": [      
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "รายงานเรื่อง ร้องขอ/แจ้งเหตุ/เสนอแนะ ที่เกิน 15 วัน",
+            "contents": []
+          }
+        ]
+      },
+      <?php $datacount=count($data2)+1;
     $colorvalue=1;  
     for ($i=1;$i<$datacount;$i++)
 {if ($i%2==0){$color="#E9DEE8FF";}else{$color="#F1D0EFFF";} echo '{ 
