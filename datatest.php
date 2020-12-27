@@ -25,7 +25,7 @@
              {
                type:"flex",
                altText:"รายงานข้อร้องเรียนประจำวัน",
-               contents:<?php '{
+               contents:<?php echo'{
   "type": "bubble",
   "direction": "ltr",
   "header": {
