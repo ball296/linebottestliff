@@ -1,11 +1,11 @@
 <?php 
 #backup datatest.php
     include("data.php");
-    $myArray=$newccAddress;
+    #$myArray=$newccAddress;
     date_default_timezone_set("Asia/Bangkok");
     $datedata=date("d/m/Y");
     $datacount=count($data2)+1;
-    echo $datacount;
+    #echo $datacount;
 ?>    
 <!DOCTYPE html>
 <html>
@@ -71,7 +71,7 @@
           }
         ]
       },'?>
-      <?php if ($datacount<>1){
+      <?php if ($datacount>1){
     for ($i=1;$i<$datacount;$i++)
         {if ($i%2==0){$color="#E9DEE8FF";}else{$color="#F1D0EFFF";} echo '{ 
         "type": "box",
@@ -108,8 +108,7 @@
             "wrap": true,
             "contents": []
           }
-        ]}';}
-?> 
+        ]}';}?> 
     ]
   },
   "footer": {
