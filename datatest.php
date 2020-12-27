@@ -70,7 +70,7 @@
           }
         ]
       },'?>
-      <?php
+      <?php if ($datacount>1){
     $colorvalue=1;  
     for ($i=1;$i<$datacount;$i++)
 {if ($i%2==0){$color="#E9DEE8FF";}else{$color="#F1D0EFFF";} echo '{ 
@@ -92,6 +92,23 @@
         ]';
         if ($i==$datacount-1){echo '}';}else{echo '},';}
         }
+      }else{echo '{ 
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "'.$color.'",
+        "contents": [
+          {
+            "type": "text",
+            "text": "ขอขอบคุณทีมงานทุกท่านเร่งดำเนินการครับ",
+            "weight": "bold",
+            "size": "sm",
+            "color": "#090000FF",
+            "gravity": "center",
+            "margin": "md",
+            "wrap": true,
+            "contents": []
+          }
+        ]}'}
 ?> 
     ]
   },
