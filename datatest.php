@@ -5,6 +5,7 @@
     date_default_timezone_set("Asia/Bangkok");
     $datedata=date("d/m/Y");
     $datacount=count($data2)+1;
+    $datacount2=count($data3)+1;
     #echo $datacount;
 ?>    
 <!DOCTYPE html>
@@ -66,11 +67,52 @@
         {
           "type": "text",
           "text": "งานเรื่อง ร้องขอ/แจ้งเหตุ/เสนอแนะ ที่ยังไม่รับไปดำเนินการ",
+          "weight": "bold",
+          "wrap": true,
           "contents": []
         }
       ]
-    },      
+    },'?>
+    <?php if ($datacount2>1){
+  for ($i=1;$i<$datacount2;$i++)
       {
+        if ($i%2==0){$color="#F7A3AEFF";}else{$color="#F07566FF";} 
+      echo '{ 
+      "type": "box",
+      "layout": "vertical",
+      "backgroundColor": "'.$color.'",
+      "contents": [
+        {
+          "type": "text",
+          "text": "'.$data3[$i-1].'",
+          "size": "sm",
+          "color": "#090000FF",
+          "gravity": "center",
+          "margin": "md",
+          "wrap": true,
+          "contents": []
+        }
+      ]},';
+      
+      }
+    }else{echo '{ 
+      "type": "box",
+      "layout": "vertical",
+      "backgroundColor": "#E9DEE8FF",
+      "contents": [
+        {
+          "type": "text",
+          "text": "ขอขอบคุณทีมงานที่เร่งรับเรื่องดำเนินการครับ",
+          "size": "sm",
+          "color": "#090000FF",
+          "gravity": "center",
+          "margin": "md",
+          "wrap": true,
+          "contents": []
+        }
+      ]},';}
+      ?>       
+      <?php echo '{
         "type": "box",
         "layout": "vertical",
         "contents": [
@@ -95,7 +137,6 @@
           {
             "type": "text",
             "text": "'.$data2[$i-1].'",
-            "weight": "bold",
             "size": "sm",
             "color": "#090000FF",
             "gravity": "center",
@@ -114,7 +155,6 @@
           {
             "type": "text",
             "text": "ขอขอบคุณทีมงานทุกท่านที่เร่งดำเนินการปิดงานตามกำหนดครับ",
-            "weight": "bold",
             "size": "sm",
             "color": "#090000FF",
             "gravity": "center",
