@@ -56,7 +56,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "'.$data2[$i].'",
+            "text": "'.$data2[$i-1].'",
             "weight": "bold",
             "color": "#F7EBEBFF",
             "gravity": "center",
