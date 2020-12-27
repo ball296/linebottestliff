@@ -4,7 +4,7 @@
     $myArray=$newccAddress;
     date_default_timezone_set("Asia/Bangkok");
     $datedata=date("d/m/Y");
-    $datacount=count($data2)+1;
+    $datacount=count($data2);
 ?>    
 <!DOCTYPE html>
 <html>
