@@ -46,7 +46,7 @@
   "body": {
     "type": "box",
     "layout": "vertical",
-    "contents": [<?php for ($i=1,$i<2;$i++){echo '{ 
+    "contents": [<?php for ($i=1;$i<2;$i++){echo '{ 
         "type": "box",
         "layout": "vertical",
         "backgroundColor": "#770D6EFF",
