@@ -40,7 +40,15 @@
         "color": "#FFFFFFF9",
         "align": "center",
         "contents": []
-      }
+      },
+      {
+        "type": "text",
+        "text": "วันที่"'.$datedata.',
+        "weight": "bold",
+        "align": "center",
+        "margin": "md",
+        "contents": []
+      }  
     ]
   },'?>
   "body": {
@@ -100,13 +108,13 @@
   },
   "styles": {
     "header": {
-      "backgroundColor": "#AA08A4FF"
+      "backgroundColor": "#93048EFF"
     },
     "body": {
       "backgroundColor": "#FFF9FFFF"
     },
     "footer": {
-      "backgroundColor": "#AA08A4FF"
+      "backgroundColor": "#93048EFF"
     }
   }
 }
