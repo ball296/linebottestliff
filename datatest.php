@@ -1,4 +1,3 @@
-#backup datatest.php
 <?php 
     include("data.php");
     $myArray=$newccAddress;
@@ -26,7 +25,7 @@
              {
                type:"flex",
                altText:"รายงานข้อร้องเรียนประจำวัน",
-               contents:{
+               contents:<?php '{
   "type": "bubble",
   "direction": "ltr",
   "header": {
@@ -42,7 +41,7 @@
         "contents": []
       }
     ]
-  },
+  },'?>
   "body": {
     "type": "box",
     "layout": "vertical",
