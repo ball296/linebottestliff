@@ -61,11 +61,9 @@
             "wrap": true,
             "contents": []
           }
-        ]}'  
+        ]}';  
       }
-      #if ($x==3){echo '}'}else{echo '},'}
-        
-    #} #close for loop ?> 
+      ?> 
     ]
   },
   "footer": {
