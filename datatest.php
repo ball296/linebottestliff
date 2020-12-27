@@ -46,7 +46,8 @@
   "body": {
     "type": "box",
     "layout": "vertical",
-    "contents": [<?php for ($i=1;$i<2;$i++){echo '{ 
+    "contents": [<?php for ($i=1;$i<3;$i++)
+{echo '{ 
         "type": "box",
         "layout": "vertical",
         "backgroundColor": "#770D6EFF",
@@ -61,9 +62,10 @@
             "wrap": true,
             "contents": []
           }
-        ]}';  
-      }
-      ?> 
+        ]';
+        if ($i==2){echo '}';}else{echo '},';}
+        }
+?> 
     ]
   },
   "footer": {
