@@ -47,11 +47,12 @@
     "type": "box",
     "layout": "vertical",
     "contents": [<?php $datacount=count($data2)+1;
+    $colorvalue=1; if ($colorvalue%2==0){$color="#770D6EFF";}else{$color="#B90CAAFF";} 
     for ($i=1;$i<3;$i++)
 {echo '{ 
         "type": "box",
         "layout": "vertical",
-        "backgroundColor": "#770D6EFF",
+        "backgroundColor": "'.$color.'",
         "contents": [
           {
             "type": "text",
