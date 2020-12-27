@@ -49,7 +49,7 @@
     "contents": [<?php $datacount=count($data2)+1;
     $colorvalue=1;  
     for ($i=1;$i<$datacount;$i++)
-{if ($i%2==0){$color="#770D6EFF";}else{$color="#B90CAAFF";} echo '{ 
+{if ($i%2==0){$color="#E9DEE8FF";}else{$color="#E0B0DCFF";} echo '{ 
         "type": "box",
         "layout": "vertical",
         "backgroundColor": "'.$color.'",
@@ -58,9 +58,10 @@
             "type": "text",
             "text": "'.$data2[$i-1].'",
             "weight": "bold",
-            "color": "#F7EBEBFF",
+            "size": "sm",
+            "color": "#090000FF",
             "gravity": "center",
-            "margin": "sm",
+            "margin": "md",
             "wrap": true,
             "contents": []
           }
@@ -101,7 +102,7 @@
       "backgroundColor": "#C905C1FF"
     },
     "body": {
-      "backgroundColor": "#E198DCFF"
+      "backgroundColor": "#FFF9FFFF"
     },
     "footer": {
       "backgroundColor": "#A906ADFF"
