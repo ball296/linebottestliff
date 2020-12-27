@@ -46,7 +46,7 @@
   "body": {
     "type": "box",
     "layout": "vertical",
-    "contents": [<?php $color="red";echo '{ 
+    "contents": [<?php $color="red";for ($i=1,$i<3;$i++){echo '{ 
         "type": "box",
         "layout": "vertical",
         "backgroundColor": "#770D6EFF",
@@ -61,8 +61,8 @@
             "wrap": true,
             "contents": []
           }
-        ]
-      }'
+        ]' if ($i==2){echo '}'}else{echo'},'}
+      }
       #if ($x==3){echo '}'}else{echo '},'}
         
     #} #close for loop ?> 
