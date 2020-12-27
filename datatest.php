@@ -1,3 +1,4 @@
+#backup datatest.php
 <?php 
     include("data.php");
     $myArray=$newccAddress;
@@ -46,7 +47,7 @@
     "type": "box",
     "layout": "vertical",
     "contents": [<?php $color="red";
-      for ($x=0 ;$x<4; $x++){ 
+      #for ($x=0 ;$x<4; $x++){ 
         echo '{ 
         "type": "box",
         "layout": "vertical",
@@ -63,8 +64,8 @@
             "contents": []
           }
         ]'
-      if ($x==3){echo '}'}else{echo '},'}
-       
+      #if ($x==3){echo '}'}else{echo '},'}
+        } 
     } #close for loop ?> 
     ]
   },
