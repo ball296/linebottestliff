@@ -5,6 +5,7 @@
     date_default_timezone_set("Asia/Bangkok");
     $datedata=date("d/m/Y");
     $datacount=count($data2)+1;
+    echo $datacount;
 ?>    
 <!DOCTYPE html>
 <html>
