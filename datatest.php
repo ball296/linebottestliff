@@ -43,7 +43,7 @@
       },
       {
         "type": "text",
-        "text": "วันที่"'.$datedata.',
+        "text": "วันที่ '.$datedata.'",
         "weight": "bold",
         "align": "center",
         "margin": "md",
