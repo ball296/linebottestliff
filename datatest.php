@@ -37,7 +37,7 @@
     "contents": [
       {
         "type": "text",
-        "text": "ติดตามงาน ร้องขอ/แจ้งเหตุ/เสนอแนะ ประจำวัน",
+        "text": "ติดตามงาน ร้องขอ/แจ้งเหตุ/เสนอแนะ ประจำวันที่",
         "wrap": true,
         "weight": "bold",
         "color": "#FFFFFFF9",
@@ -46,7 +46,7 @@
       },
       {
         "type": "text",
-        "text": "วันที่ '.$datedata.'",
+        "text": "'.$datedata.'",
         "weight": "bold",
         "color": "#FFFFFFF9",
         "align": "center",
@@ -58,14 +58,25 @@
   "body": {
     "type": "box",
     "layout": "vertical",
-    "contents": [      
+    "contents": [
+      {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "งานเรื่อง ร้องขอ/แจ้งเหตุ/เสนอแนะ ที่ยังไม่รับไปดำเนินการ",
+          "contents": []
+        }
+      ]
+    },      
       {
         "type": "box",
         "layout": "vertical",
         "contents": [
           {
             "type": "text",
-            "text": "รายงานเรื่อง ร้องขอ/แจ้งเหตุ/เสนอแนะ ที่เกิน 15 วัน มีจำนวน '.($datacount-1).' เรื่อง",
+            "text": "งานเรื่อง ร้องขอ/แจ้งเหตุ/เสนอแนะ ที่เกิน 15 วัน มีจำนวน '.($datacount-1).' เรื่อง",
             "weight": "bold",
             "wrap": true,
             "contents": []
@@ -132,7 +143,7 @@
               "label": "Share",
               "uri": "https://liff.line.me/1655423177-8dMEraKE"
             },
-            "color": "#22B003FF",
+            "color": "#590555FF",
             "margin": "md",
             "height": "sm",
             "style": "primary",
