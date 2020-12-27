@@ -1,5 +1,5 @@
-#backup datatest.php
 <?php 
+#backup datatest.php
     include("data.php");
     $myArray=$newccAddress;
     date_default_timezone_set("Asia/Bangkok");
@@ -46,16 +46,14 @@
   "body": {
     "type": "box",
     "layout": "vertical",
-    "contents": [<?php $color="red";
-      #for ($x=0 ;$x<4; $x++){ 
-        echo '{ 
+    "contents": [<?php echo '{ 
         "type": "box",
         "layout": "vertical",
         "backgroundColor": "#770D6EFF",
         "contents": [
           {
             "type": "text",
-            "text": "'.$color.'",
+            "text": "red",
             "weight": "bold",
             "color": "#F7EBEBFF",
             "gravity": "center",
@@ -63,9 +61,10 @@
             "wrap": true,
             "contents": []
           }
-        ]'
+        ]
+      }'
       #if ($x==3){echo '}'}else{echo '},'}
-        } 
+        
     #} #close for loop ?> 
     ]
   },
