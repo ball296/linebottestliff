@@ -78,7 +78,8 @@
       {
         "type": "box",
         "layout": "horizontal",
-        "margin": "xxl",
+        "spacing":"md",
+        "margin": "none",
         "contents": [
           {
             "type": "button",
@@ -91,7 +92,7 @@
             "margin": "md",
             "height": "sm",
             "style": "primary",
-            "gravity": "bottom"
+            "gravity": "center"
           }
         ]
       }
@@ -99,13 +100,13 @@
   },
   "styles": {
     "header": {
-      "backgroundColor": "#C905C1FF"
+      "backgroundColor": "#AA08A4FF"
     },
     "body": {
       "backgroundColor": "#FFF9FFFF"
     },
     "footer": {
-      "backgroundColor": "#A906ADFF"
+      "backgroundColor": "#AA08A4FF"
     }
   }
 }
