@@ -66,6 +66,7 @@
           {
             "type": "text",
             "text": "รายงานเรื่อง ร้องขอ/แจ้งเหตุ/เสนอแนะ ที่เกิน 15 วัน มีจำนวน '.($datacount-1).' เรื่อง",
+            "weight": "bold",
             "wrap": true,
             "contents": []
           }
@@ -74,7 +75,7 @@
       <?php if ($datacount>1){
     for ($i=1;$i<$datacount;$i++)
         {
-          if ($i%2==0){$color="#E9DEE8FF";}else{$color="#F1D0EFFF";} 
+          if ($i%2==0){$color="#F7A3AEFF";}else{$color="#F07566FF";} 
         echo '{ 
         "type": "box",
         "layout": "vertical",
