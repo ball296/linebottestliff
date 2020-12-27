@@ -56,7 +56,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "'echo $data2[$i];'",
+            "text": "'echo $data2[$i]'",
             "weight": "bold",
             "color": "#F7EBEBFF",
             "gravity": "center",
