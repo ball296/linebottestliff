@@ -46,7 +46,7 @@
   "body": {
     "type": "box",
     "layout": "vertical",
-    "contents": [<?php echo '{ 
+    "contents": [<?php $color="red";echo '{ 
         "type": "box",
         "layout": "vertical",
         "backgroundColor": "#770D6EFF",
