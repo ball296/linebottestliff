@@ -49,7 +49,7 @@
     "contents": [<?php $datacount=count($data2)+1;
     $colorvalue=1;  
     for ($i=1;$i<$datacount;$i++)
-{if ($i%2==0){$color="#E9DEE8FF";}else{$color="#E0B0DCFF";} echo '{ 
+{if ($i%2==0){$color="#E9DEE8FF";}else{$color="#F1D0EFFF";} echo '{ 
         "type": "box",
         "layout": "vertical",
         "backgroundColor": "'.$color.'",
@@ -85,9 +85,9 @@
             "action": {
               "type": "uri",
               "label": "Share",
-              "uri": "https://linecorp.com"
+              "uri": "https://liff.line.me/1655423177-8dMEraKE"
             },
-            "color": "#860B8CFF",
+            "color": "#22B003FF",
             "margin": "md",
             "height": "sm",
             "style": "primary",
