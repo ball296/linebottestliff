@@ -66,7 +66,7 @@
         ]'
       #if ($x==3){echo '}'}else{echo '},'}
         } 
-    } #close for loop ?> 
+    #} #close for loop ?> 
     ]
   },
   "footer": {
