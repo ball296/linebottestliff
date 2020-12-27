@@ -46,7 +46,8 @@
   "body": {
     "type": "box",
     "layout": "vertical",
-    "contents": [<?php for ($i=1;$i<3;$i++)
+    "contents": [<?php $datacount=count($data2)+1;
+    for ($i=1;$i<3;$i++)
 {echo '{ 
         "type": "box",
         "layout": "vertical",
