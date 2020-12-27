@@ -45,13 +45,13 @@
   "body": {
     "type": "box",
     "layout": "vertical",
-    "contents": [
-      {
+    "contents": [<?php
+      for ($x=0 ;$x<4; $x++){ 
+        echo '{ 
         "type": "box",
         "layout": "vertical",
         "backgroundColor": "#770D6EFF",
-        "contents": <?php 
-        $color="green"; echo'[
+        "contents": [
           {
             "type": "text",
             "text": "'.$color.'",
@@ -63,23 +63,8 @@
             "contents": []
           }
         ]
-      },
-      {
-        "type": "box",
-        "layout": "vertical",
-        "backgroundColor": "#B90CAAFF",
-        "contents": [
-          {
-            "type": "text",
-            "text": "2. กฟจ.พิษณุโลก ",
-            "weight": "bold",
-            "color": "#F7EFEFFF",
-            "margin": "sm",
-            "wrap": true,
-            "contents": []
-          }
-        ]
-      }
+      },'} ?>
+      
     ]
   },
   "footer": {
@@ -119,7 +104,7 @@
       "backgroundColor": "#A906ADFF"
     }
   }
-}'?>
+}
              }
       ])
     liff.closeWindow()
