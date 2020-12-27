@@ -48,7 +48,7 @@
     "layout": "vertical",
     "contents": [<?php $datacount=count($data2)+1;
     $colorvalue=1; if ($colorvalue%2==0){$color="#770D6EFF";}else{$color="#B90CAAFF";} 
-    for ($i=1;$i<3;$i++)
+    for ($i=1;$i<5;$i++)
 {echo '{ 
         "type": "box",
         "layout": "vertical",
@@ -65,7 +65,7 @@
             "contents": []
           }
         ]';
-        if ($i==2){echo '}';}else{echo '},';}
+        if ($i==4){echo '}';}else{echo '},';}
         }
 ?> 
     ]
