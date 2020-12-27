@@ -1,4 +1,3 @@
-#backup datatest.php
 <?php 
     include("data.php");
     $myArray=$newccAddress;
@@ -64,7 +63,7 @@
             "contents": []
           }
         ]'
-      if ($x<>4){echo '},'}else{echo '}'}
+      if ($x==3){echo '}'}else{echo '},'}
        
     } #close for loop ?> 
     ]
