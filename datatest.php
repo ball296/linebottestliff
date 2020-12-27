@@ -1,6 +1,7 @@
-<?php 
+
+<?php
     include("data.php");
-    #$myArray=$newccAddress;
+    $myArray=$newccAddress;
     date_default_timezone_set("Asia/Bangkok");
     $datedata=date("d/m/Y");
 ?>    
@@ -25,95 +26,100 @@
              {
                type:"flex",
                altText:"รายงานข้อร้องเรียนประจำวัน",
-               contents:<?php echo '{
-    "type": "bubble",
-    "direction": "ltr",
+               contents:{
+  "type": "bubble",
+  "direction": "ltr",
+  "header": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "ติดตามงานข้อร้องเรียนประจำวัน",
+        "weight": "bold",
+        "color": "#FFFFFFF9",
+        "align": "center",
+        "contents": []
+      }
+    ]
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#770D6EFF",
+        "contents": [
+          {
+            "type": "text",
+            "text": "1. กฟอ.แม่สอด",
+            "weight": "bold",
+            "color": "#F7EBEBFF",
+            "gravity": "center",
+            "margin": "sm",
+            "wrap": true,
+            "contents": []
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#B90CAAFF",
+        "contents": [
+          {
+            "type": "text",
+            "text": "2. กฟจ.พิษณุโลก ",
+            "weight": "bold",
+            "color": "#F7EFEFFF",
+            "margin": "sm",
+            "wrap": true,
+            "contents": []
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "horizontal",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "margin": "xxl",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "Share",
+              "uri": "https://linecorp.com"
+            },
+            "color": "#860B8CFF",
+            "margin": "md",
+            "height": "sm",
+            "style": "primary",
+            "gravity": "bottom"
+          }
+        ]
+      }
+    ]
+  },
+  "styles": {
     "header": {
-      "type": "box",
-      "layout": "vertical",
-      "contents": [
-        {
-          "type": "text",
-          "text": "ติดตามงานข้อร้องเรียนประจำวัน",
-          "weight": "bold",
-          "color": "#FFFFFFF9",
-          "align": "center",
-          "contents": []
-        }
-      ]
+      "backgroundColor": "#C905C1FF"
     },
     "body": {
-      "type": "box",
-      "layout": "vertical",
-      "contents": ['; 
-                 ?>
-        <?php
-  $datacount=count($data2)+1;
-        #echo $datacount;
-        $colorvalue=1; 
-        foreach($data2 as $value) {
-          if ($colorvalue%2==0){$color="#770D6EFF";}else{$color="#B90CAAFF";}
-          echo "{<br>";
-          echo '"type":"box",<br>';
-          echo '"layout": "vertical",<br>';
-          echo '"backgroundColor":"'.$color.'",<br>';
-          echo '"contents": [<br>';
-            echo "{<br>";
-              echo '"type": "text",<br>';
-              echo '"text": "'.$value.'",<br>';
-              echo '"weight": "bold",<br>';
-              echo '"color": "#F7EBEBFF",<br>';
-              echo '"gravity": "center",<br>';
-              echo '"margin": "sm",<br>';
-              echo '"wrap": true,<br>';
-              echo '"contents": []<br>';
-            echo "}<br>";
-          echo "]<br>";
-          if($colorvalue==$datacount-1){
-        echo "}<br>";}else{echo "},<br>";}
-            $colorvalue=$colorvalue+1;
-            }
-            echo ']
+      "backgroundColor": "#E198DCFF"
     },
     "footer": {
-      "type": "box",
-      "layout": "horizontal",
-      "contents": [
-        {
-          "type": "box",
-          "layout": "horizontal",
-          "margin": "xxl",
-          "contents": [
-            {
-              "type": "button",
-              "action": {
-                "type": "uri",
-                "label": "Share",
-                "uri": "https://linecorp.com"
-              },
-              "color": "#860B8CFF",
-              "margin": "md",
-              "height": "sm",
-              "style": "primary",
-              "gravity": "bottom"
-            }
-          ]
-        }
-      ]
-    },
-    "styles": {
-      "header": {
-        "backgroundColor": "#C905C1FF"
-      },
-      "body": {
-        "backgroundColor": "#E198DCFF"
-      },
-      "footer": {
-        "backgroundColor": "#A906ADFF"
-      }
+      "backgroundColor": "#A906ADFF"
     }
-  }'; 
-?>
+  }
+}
              }
       ])
     liff.closeWindow()
