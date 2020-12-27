@@ -4,7 +4,7 @@
     $myArray=$newccAddress;
     date_default_timezone_set("Asia/Bangkok");
     $datedata=date("d/m/Y");
-    $datacount=count($data2);
+    $datacount=count($data2)+1;
 ?>    
 <!DOCTYPE html>
 <html>
@@ -64,7 +64,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "รายงานเรื่อง ร้องขอ/แจ้งเหตุ/เสนอแนะ ที่เกิน 15 วัน มีจำนวน '.$datacount.' เรื่อง",
+            "text": "รายงานเรื่อง ร้องขอ/แจ้งเหตุ/เสนอแนะ ที่เกิน 15 วัน มีจำนวน '.$datacount-1.' เรื่อง",
             "wrap": true,
             "contents": []
           }
