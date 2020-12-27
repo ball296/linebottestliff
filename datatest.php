@@ -50,10 +50,11 @@
         "type": "box",
         "layout": "vertical",
         "backgroundColor": "#770D6EFF",
-        "contents": <?php echo'[
+        "contents": <?php 
+        $color="green"; echo'[
           {
             "type": "text",
-            "text": "1. กฟอ.แม่สอด",
+            "text": "'.$color.'",
             "weight": "bold",
             "color": "#F7EBEBFF",
             "gravity": "center",
