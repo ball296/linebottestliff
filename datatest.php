@@ -71,10 +71,9 @@
           }
         ]
       },'?>
-      <?php if ($datacount>1){
-    $colorvalue=1;  
+      <?php if ($datacount<>1){
     for ($i=1;$i<$datacount;$i++)
-{if ($i%2==0){$color="#E9DEE8FF";}else{$color="#F1D0EFFF";} echo '{ 
+        {if ($i%2==0){$color="#E9DEE8FF";}else{$color="#F1D0EFFF";} echo '{ 
         "type": "box",
         "layout": "vertical",
         "backgroundColor": "'.$color.'",
@@ -96,7 +95,7 @@
       }else{echo '{ 
         "type": "box",
         "layout": "vertical",
-        "backgroundColor": "'.$color.'",
+        "backgroundColor": "#E9DEE8FF",
         "contents": [
           {
             "type": "text",
