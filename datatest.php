@@ -1,5 +1,5 @@
-
-<?php
+#backup datatest.php
+<?php 
     include("data.php");
     $myArray=$newccAddress;
     date_default_timezone_set("Asia/Bangkok");
@@ -51,7 +51,7 @@
         "type": "box",
         "layout": "vertical",
         "backgroundColor": "#770D6EFF",
-        "contents": [
+        "contents": <?php echo'[
           {
             "type": "text",
             "text": "1. กฟอ.แม่สอด",
@@ -119,7 +119,7 @@
       "backgroundColor": "#A906ADFF"
     }
   }
-}
+}'?>
              }
       ])
     liff.closeWindow()
