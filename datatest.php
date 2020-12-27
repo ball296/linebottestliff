@@ -36,6 +36,7 @@
       {
         "type": "text",
         "text": "ติดตามงาน ร้องขอ/แจ้งเหตุ/เสนอแนะ ประจำวัน",
+        "wrap": true,
         "weight": "bold",
         "color": "#FFFFFFF9",
         "align": "center",
@@ -51,7 +52,7 @@
         "contents": []
       }  
     ]
-  },'?>
+  },
   "body": {
     "type": "box",
     "layout": "vertical",
@@ -62,11 +63,12 @@
         "contents": [
           {
             "type": "text",
-            "text": "รายงานเรื่อง ร้องขอ/แจ้งเหตุ/เสนอแนะ ที่เกิน 15 วัน",
+            "text": "รายงานเรื่อง ร้องขอ/แจ้งเหตุ/เสนอแนะ ที่เกิน 15 วัน มีจำนวน '.count($data2)+1.' เรื่อง",
+            "wrap": true,
             "contents": []
           }
         ]
-      },
+      },'?>
       <?php $datacount=count($data2)+1;
     $colorvalue=1;  
     for ($i=1;$i<$datacount;$i++)
