@@ -24,7 +24,7 @@
   <script src="https://static.line-scdn.net/liff/edge/versions/2.5.0/sdk.js"></script>
   <script>
     async function main() {
-       await liff.init({liffId:"1655423177-8dMEraKE"})
+       await liff.init({liffId:"1655423177-nKP1zdX1"})
        await liff.shareTargetPicker([
              {
                type:"flex",
