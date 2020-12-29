@@ -6,6 +6,7 @@
     $datedata=date("d/m/Y");
     $datacount=count($data4)+1;
     $datacount2=count($data5)+1;
+    print $datacount,$datacount2;
     #echo $datacount;
 ?>    
 <!DOCTYPE html>
