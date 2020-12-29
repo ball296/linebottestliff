@@ -136,7 +136,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "'.$data2[$i-1].'",
+            "text": "'.$data4[$i-1].'",
             "size": "sm",
             "color": "#090000FF",
             "gravity": "center",
