@@ -40,7 +40,7 @@ for ($m = 0; $m <= $numdata; $m++) {
     $r=$r+1;
   }}
   
-    if ($data[$x][$typevoc]=="ร้องเรียน" and $data[$x][$stw]=="รอดำเนินการ" ){ 
+    if ($data[$m][$typevoc]=="ร้องเรียน" and $data[$m][$stw]=="รอดำเนินการ" ){ 
     $data4[]=($n)." ".$data[$m][$namepea1]." เลขที่ร้อง ".$data[$m][$numvocdata]." ชื่อผู้ร้อง ".$data[$m][$namedata]." ร้องแล้ว ".$data[$m][$numdaydata]." วัน สถานะ "."'".$data[$m][$stw]."'" ;
     $n=$n+1;
     }
