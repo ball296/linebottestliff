@@ -138,7 +138,7 @@
             "type": "text",
             "text": "'.$data2[$i-1].'",
             "size": "sm",
-            "color": "#090000FF",
+            "color": "#C80B0BFF",
             "gravity": "center",
             "margin": "md",
             "wrap": true,
