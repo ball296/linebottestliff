@@ -4,7 +4,7 @@
     #$myArray=$newccAddress;
     date_default_timezone_set("Asia/Bangkok");
     $datedata=date("d/m/Y");
-    $datacount=count($data3)+1;
+    $datacount=count($data4)+1;
     $datacount2=count($data5)+1;
     #echo $datacount;
 ?>    
@@ -76,7 +76,7 @@
     <?php if ($datacount2>1){
   for ($i=1;$i<$datacount2;$i++)
       {
-        if ($i%2==0){$color="#F7A3AEFF";}else{$color="#F07566FF";} 
+        if ($i%2==0){$color="#FFFFFF00";}else{$color="#EBE4E4FF";} 
       echo '{ 
       "type": "box",
       "layout": "vertical",
@@ -128,7 +128,7 @@
       <?php if ($datacount>1){
     for ($i=1;$i<$datacount;$i++)
         {
-          if ($i%2==0){$color="#F7A3AEFF";}else{$color="#F07566FF";} 
+          if ($i%2==0){$color="#FFFFFF00";}else{$color="#EBE4E4FF";} 
         echo '{ 
         "type": "box",
         "layout": "vertical",
@@ -136,7 +136,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "'.$data3[$i-1].'",
+            "text": "'.$data4[$i-1].'",
             "size": "sm",
             "color": "#090000FF",
             "gravity": "center",
