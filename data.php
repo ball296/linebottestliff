@@ -33,15 +33,15 @@ for ($x = 0; $x <= $numdata; $x++) {
 #เรื่อง ร้องเรียน
 $r=1;
 $n=1;
-for ($m = 0; $m <= $numdata; $m++) {
-    if ($data[$m][$typevoc]=="ร้องเรียน" and $data[$m][$stw]=="กำลังดำเนินการ" ){
-      if($data[$m][$numdaydata]>=15){
-    $data4[]= ($r)." ".$data[$m][$namepea1]." เลขที่ร้อง ".$data[$m][$numvocdata]." ชื่อผู้ร้อง ".$data[$m][$namedata]." ร้องแล้ว ".$data[$m][$numdaydata]." วัน สถานะ "."'".$data[$m][$stw]."'" ;
+for ($x = 0; $x <= $numdata; $x++) {
+    if ($data[$x][$typevoc]=="ร้องเรียน" and $data[$x][$stw]=="กำลังดำเนินการ" ){
+      if($data[$x][$numdaydata]>=15){
+    $data4[]= ($r)." ".$data[$x][$namepea1]." เลขที่ร้อง ".$data[$x][$numvocdata]." ชื่อผู้ร้อง ".$data[$x][$namedata]." ร้องแล้ว ".$data[$x][$numdaydata]." วัน สถานะ "."'".$data[$x][$stw]."'" ;
     $r=$r+1;
   }}
   
-    if ($data[$m][$typevoc]=="ร้องเรียน" and $data[$m][$stw]=="รอดำเนินการ" ){ 
-    $data5[]=($n)." ".$data[$m][$namepea1]." เลขที่ร้อง ".$data[$m][$numvocdata]." ชื่อผู้ร้อง ".$data[$m][$namedata]." ร้องแล้ว ".$data[$m][$numdaydata]." วัน สถานะ "."'".$data[$m][$stw]."'" ;
+    if ($data[$x][$typevoc]=="ร้องเรียน" and $data[$x][$stw]=="รอดำเนินการ" ){ 
+    $data5[]=($n)." ".$data[$x][$namepea1]." เลขที่ร้อง ".$data[$x][$numvocdata]." ชื่อผู้ร้อง ".$data[$x][$namedata]." ร้องแล้ว ".$data[$x][$numdaydata]." วัน สถานะ "."'".$data[$x][$stw]."'" ;
     $n=$n+1;
     }
 }
