@@ -5,7 +5,7 @@
     date_default_timezone_set("Asia/Bangkok");
     $datedata=date("d/m/Y");
     $datacount=count($data4)+1;
-    $datacount2=count($data5)+1;
+    $datacount2=count($data4)+1;
     #echo $datacount;
 ?>    
 <!DOCTYPE html>
@@ -136,7 +136,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "'.$data5[$i-1].'",
+            "text": "'.$data4[$i-1].'",
             "size": "sm",
             "color": "#090000FF",
             "gravity": "center",
