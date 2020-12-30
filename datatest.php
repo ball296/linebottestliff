@@ -76,7 +76,7 @@
     <?php if ($datacount2>1){
   for ($i=1;$i<$datacount2;$i++)
       {
-        if ($i%2==0){$color="#FFFFFF00";}else{$color="#EBE4E4FF";} 
+        if ($i%2==0){$color="#EBE4E4FF";}else{$color="#FFFFFF00";} 
       echo '{ 
       "type": "box",
       "layout": "vertical",
@@ -128,7 +128,7 @@
       <?php if ($datacount>1){
     for ($i=1;$i<$datacount;$i++)
         {
-          if ($i%2==0){$color="#FFFFFF00";}else{$color="#EBE4E4FF";} 
+          if ($i%2==0){$color="#EBE4E4FF";}else{$color="#FFFFFF00";} 
         echo '{ 
         "type": "box",
         "layout": "vertical",
