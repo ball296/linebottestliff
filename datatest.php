@@ -4,8 +4,8 @@
     #$myArray=$newccAddress;
     date_default_timezone_set("Asia/Bangkok");
     $datedata=date("d/m/Y");
-    $datacount=count($data4)+1;
-    $datacount2=count($data5)+1;
+    $datacount=count($data2)+1;
+    $datacount2=count($data3)+1;
     #echo $datacount;
 ?>    
 <!DOCTYPE html>
@@ -84,7 +84,7 @@
       "contents": [
         {
           "type": "text",
-          "text": "'.$data5[$i-1].'",
+          "text": "'.$data3[$i-1].'",
           "size": "sm",
           "color": "#090000FF",
           "gravity": "center",
@@ -136,7 +136,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "'.$data4[$i-1].'",
+            "text": "'.$data2[$i-1].'",
             "size": "sm",
             "color": "#090000FF",
             "gravity": "center",
