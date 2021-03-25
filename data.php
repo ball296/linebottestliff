@@ -1,5 +1,10 @@
 <?php
 $conn=pg_pconnect("host='abc.ceolfzqm6b95.us-west-2.rds.amazonaws.com' port='5432' dbname='demo' user='postgres' password='freedom4506296'");
+if (!$conn){  
+echo "<center><h1>Doesn't work =(</h1></center>";  
+}else  
+echo "<center><h1>Good connection</h1></center>";  
+     
 $result=pg_query($conn,"SELECT*FROM voctable");
 $data = array();
 while ($row = pg_fetch_assoc($result))
