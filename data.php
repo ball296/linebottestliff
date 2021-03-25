@@ -1,5 +1,5 @@
 <?php
-$conn=pg_connect("host='abc.ceolfzqm6b95.us-west-2.rds.amazonaws.com' port='5432' dbname='demo' user='postgres' password='freedom4506296'");
+$conn=pg_pconnect("host='abc.ceolfzqm6b95.us-west-2.rds.amazonaws.com' port='5432' dbname='demo' user='postgres' password='freedom4506296'");
 $result=pg_query($conn,"SELECT*FROM voctable");
 $data = array();
 while ($row = pg_fetch_assoc($result))
