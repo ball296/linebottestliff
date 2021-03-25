@@ -1,5 +1,5 @@
 <?php
-$conn=mysqli_connect("ballstudio.ceolfzqm6b95.us-west-2.rds.amazonaws.com","root","freedom4506296","demo");
+$conn=mysqli_connect("abc.ceolfzqm6b95.us-west-2.rds.amazonaws.com","postgres","freedom4506296","demo","5432");
 $result=mysqli_query($conn,"SELECT*FROM voctable");
 $data = array();
 while ($row = mysqli_fetch_assoc($result))
