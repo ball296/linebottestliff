@@ -1,15 +1,15 @@
 <?php
-$conn=mysqli_connect("abc.ceolfzqm6b95.us-west-2.rds.amazonaws.com","postgres","freedom4506296","demo","5432");
-$result=mysqli_query($conn,"SELECT*FROM voctable");
+$conn=pg_connect("host=abc.ceolfzqm6b95.us-west-2.rds.amazonaws.com dbname=demo user=postgres password=freedom4506296");
+$result=pg_query($conn,"SELECT*FROM voctable");
 $data = array();
-while ($row = mysqli_fetch_assoc($result))
+while ($row = pg_fetch_assoc($result))
 {
     $data[]=$row;
 
 }
 #print (count($data));
 $namepea1="namepea";
-$typevoc="Group1";
+$typevoc="group1";
 $stw="statusvoc";
 $numvocdata="numvoc";
 $numdata=count($data);
