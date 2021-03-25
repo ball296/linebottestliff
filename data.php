@@ -1,5 +1,5 @@
 <?php
-echo"hi";
+echo "hi";
 $conn=pg_pconnect("host='abc.ceolfzqm6b95.us-west-2.rds.amazonaws.com' port='5432' dbname='demo' user='postgres' password='freedom4506296'");
 if (!$conn){  
 echo "<center><h1>Doesn't work =(</h1></center>";  
