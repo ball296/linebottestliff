@@ -8,7 +8,7 @@ while ($row = pg_fetch_assoc($result))
 
 }
 #print (count($data));
-$namepea1="namepea";
+$namepea1="pea";
 $typevoc="group1";
 $stw="statusvoc";
 $numvocdata="numvoc";
